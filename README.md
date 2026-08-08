@@ -1,280 +1,105 @@
-<div align="center">
+<p align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:050505,48:6D28D9,100:A855F7&text=MARCUS%20PAULO&fontSize=56&fontColor=FFFFFF&animation=fadeIn&fontAlignY=36&desc=Python%20%E2%80%A2%20Automa%C3%A7%C3%A3o%20%E2%80%A2%20IA%20aplicada&descAlignY=58&descSize=18" alt="Marcus Paulo — Python, automação e inteligência artificial aplicada" />
+</p>
 
-<img width="100%" alt="Banner de Marcus Paulo" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=0:050505,50:6d28d9,100:a855f7&text=MARCUS%20PAULO&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=35"/>
+<h1 align="center">Olá, eu sou Marcus Paulo 👋</h1>
 
-<img alt="Apresentação profissional animada" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=2500&pause=800&color=C084FC&center=true&vCenter=true&width=900&lines=SYSTEM+BOOTING...;SOFTWARE+ENGINEERING+STUDENT;PYTHON+%7C+AUTOMATION+%7C+AI;REST+APIS+%7C+DATABASES+%7C+SOFTWARE;WELCOME+TO+MY+CODE+UNIVERSE"/>
+<p align="center">
+  <strong>Estudante de Engenharia de Software e desenvolvedor Python em Belo Horizonte.</strong><br />
+  Transformo processos reais em automações, APIs e produtos digitais úteis.
+</p>
 
-</div>
+<p align="center">
+  <a href="https://github.com/MarcusMouraDev">
+    <img src="https://img.shields.io/badge/GitHub-050505?style=for-the-badge&logo=github&logoColor=white" alt="Perfil de Marcus Moura no GitHub" />
+  </a>
+  <a href="https://www.linkedin.com/in/marcuspaulomoura">
+    <img src="https://img.shields.io/badge/LinkedIn-6D28D9?style=for-the-badge&logo=linkedin&logoColor=white" alt="Perfil de Marcus Moura no LinkedIn" />
+  </a>
+</p>
 
----
+## 👋 Sobre mim
 
-## 🤖 MARCUS AI CORE
+Gosto de construir software que elimina trabalho repetitivo e deixa decisões mais simples. Minha experiência com rotinas administrativas, atendimento e documentação me ajuda a enxergar problemas além do código — primeiro entendo o processo, depois desenho uma solução prática.
 
-```bash
-╭────────────────────────────╮
-│     MARCUS SYSTEM v2.0     │
-╰────────────────────────────╯
+- 🎓 Engenharia de Software na **UNA — Belo Horizonte** · 2026–2029
+- 🐍 Foco em **Python, APIs REST, SQL e automação**
+- 🤖 Interesse em **IA local, agentes e ferramentas de produtividade**
+- 🌎 Português nativo · inglês intermediário
 
-Initializing system...
+## 🧰 Competências
 
-████████████████████ 100%
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-6D28D9?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/SQL-7C3AED?style=flat-square&logo=sqlite&logoColor=white" alt="SQL" />
+  <img src="https://img.shields.io/badge/SQLite-8B5CF6?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/SQLAlchemy-A855F7?style=flat-square&logo=python&logoColor=white" alt="SQLAlchemy" />
+  <img src="https://img.shields.io/badge/Pandas-C084FC?style=flat-square&logo=pandas&logoColor=050505" alt="Pandas" />
+  <img src="https://img.shields.io/badge/REST_APIs-6D28D9?style=flat-square&logo=fastapi&logoColor=white" alt="APIs REST" />
+  <img src="https://img.shields.io/badge/N8N-7C3AED?style=flat-square&logo=n8n&logoColor=white" alt="N8N" />
+  <img src="https://img.shields.io/badge/Ollama-050505?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
+</p>
 
-✔ Software Engineering student detected
-✔ Python development enabled
-✔ Automation and AI activated
-✔ Professional experience loaded
-✔ Projects online
-
-STATUS: ONLINE 🚀
-```
-
----
-
-## 👨‍💻 About Me
-
-```javascript
-const MarcusPaulo = {
-
-  name: "Marcus Paulo",
-
-  role:
-    "Software Engineering Student | Python Developer",
-
-  location: "Belo Horizonte, Minas Gerais, Brazil 🇧🇷",
-
-  education: {
-    course: "Software Engineering",
-    institution: "UNA — Belo Horizonte",
-    period: "2026 — December 2029"
-  },
-
-  experience: [
-    {
-      role: "Administrative Intern",
-      company: "Smart Leilões",
-      period: "February 2026 — Present",
-      activities: [
-        "CRM and customer service",
-        "Administrative and legal documentation",
-        "Contracts, certificates, invoices and debt checks",
-        "Reports, payment records and collection support",
-        "AI applied to process automation"
-      ]
-    },
-    {
-      role: "Sales",
-      period: "December 2024 — December 2025",
-      activities: [
-        "Customer service",
-        "Commercial communication",
-        "Negotiation and relationship building"
-      ]
-    }
-  ],
-
-  stack: {
-    languages: [
-      "Python",
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-
-    backend: [
-      "REST APIs",
-      "Requests",
-      "JSON"
-    ],
-
-    database: [
-      "SQLite",
-      "SQLAlchemy"
-    ],
-
-    data: [
-      "Pandas"
-    ],
-
-    automation: [
-      "N8N",
-      "Artificial Intelligence"
-    ]
-  },
-
-  tools: [
-    "Git",
-    "GitHub",
-    "VS Code",
-    "GitHub Copilot"
-  ],
-
-  currentProject: {
-    name: "JARVIS — Personal AI Assistant",
-    status: "In development",
-    architecture: [
-      "Hermes Agent integration",
-      "Local AI with Ollama",
-      "OmniRoute as a cloud fallback",
-      "Controlled memory and reusable skills",
-      "IDE and workflow automation"
-    ]
-  },
-
-  professionalQualifications: [
-    "Object-Oriented Programming",
-    "API integration and error handling",
-    "CRUD and database persistence",
-    "Administrative and legal workflows",
-    "Process organization and documentation",
-    "Automation with AI"
-  ],
-
-  languages: {
-    portuguese: "Native",
-    english: "Intermediate"
-  },
-
-  mission:
-    "Building practical software that transforms real processes 🚀"
-}
-```
-
----
-
-## ⚡ Tech Stack
-
-<div align="center">
-
-<img alt="Python, HTML, CSS, JavaScript, SQLite, Git, GitHub e VS Code" src="https://skillicons.dev/icons?i=py,html,css,js,sqlite,git,github,vscode&perline=8"/>
-
-<br><br>
-
-<img alt="N8N" src="https://img.shields.io/badge/N8N-EA4B71?style=for-the-badge&logo=n8n&logoColor=white"/>
-<img alt="SQLAlchemy" src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white"/>
-<img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
-<img alt="REST API" src="https://img.shields.io/badge/REST_API-6D28D9?style=for-the-badge"/>
-<img alt="Hermes Agent" src="https://img.shields.io/badge/Hermes_Agent-050505?style=for-the-badge"/>
-<img alt="Ollama" src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white"/>
-
-</div>
-
----
-
-## 🚀 Featured Projects
-
-| 🚀 Project | 💡 Description |
+| Área | O que aplico |
 |---|---|
-| 🌐 [Portfólio Profissional](https://marcus-moura-portfolio.mpfagundesmoura.chatgpt.site) | Responsive website presenting my profile, skills and software projects |
-| 📋 [Monitor de Tasks](https://monitor-tasks.mpfagundesmoura.chatgpt.site) | Dashboard for monitoring scheduled ChatGPT Tasks, notifications and execution status |
-| 💰 [O RPG das suas finanças](https://saldo-financas-local.mpfagundesmoura.chatgpt.site) | Gamified application for financial education and personal money organization through RPG mechanics |
-| 🤖 JARVIS — Personal AI Assistant · In development | Personal assistant architecture with Hermes Agent, controlled memory, reusable skills, local AI through Ollama and OmniRoute cloud fallback |
-| 🌦️ [OpenWeather System](https://github.com/MarcusMouraDev/Meu-Portif-lio-) | Weather consultation with Python, REST API, JSON, SQLite, SQLAlchemy, Pandas and CRUD |
-| 🎯 [Hangman Game — OOP](https://github.com/MarcusMouraDev/Meu-Portif-lio-) | Terminal game with Python classes, difficulty levels, validations and game-state control |
-| ⚔️ [Terminal Python RPG](https://github.com/MarcusMouraDev/Meu-Portif-lio-) | Text RPG with OOP, random combat, enemies, missions, experience and level progression |
+| **Backend** | Python, orientação a objetos, APIs REST, Requests e JSON |
+| **Dados** | SQLite, SQLAlchemy, Pandas e persistência CRUD |
+| **Automação e IA** | N8N, Ollama, agentes, integrações e desenho de fluxos |
+| **Web e ferramentas** | JavaScript, HTML, CSS, Git, GitHub e VS Code |
 
----
+## 🚀 Projetos em destaque
 
-## 🧠 Current Mission
+### 1. Saldo — dinheiro sem drama
 
-```bash
-> Loading objectives...
+Aplicação financeira gamificada que transforma organização pessoal em uma campanha clara: contas, movimentos, metas, orçamento e patrimônio ficam reunidos em uma experiência local-first.
 
-[████████░░] Software Engineering
+**Destaques:** interface responsiva, dados no navegador, missões financeiras e foco em privacidade.  
+**[Ver projeto](https://saldo-financas-local.mpfagundesmoura.chatgpt.site)**
 
-[█████████░] Python Development
+### 2. Sistema climático com OpenWeather
 
-[████████░░] REST APIs and Databases
+Aplicação Python que consulta dados climáticos via API, trata respostas e erros, registra o histórico em SQLite e organiza a persistência com SQLAlchemy.
 
-[███████░░░] Automation and Artificial Intelligence
+**Destaques:** POO, REST API, JSON, Repository Pattern, CRUD e visualização com Pandas.  
+**[Ver projeto](https://github.com/MarcusMouraDev/Meu-Portif-lio-/blob/main/sistema_clima_openweather.py)**
 
-[██████░░░░] JARVIS + Hermes Agent Integration
+### 3. Jogo da Forca orientado a objetos
 
-[████████░░] Building Portfolio Projects
+Jogo de terminal estruturado em classes independentes para palavra, boneco e fluxo da partida, com níveis de dificuldade e validação de entradas.
 
-STATUS:
-Learning, building and solving real problems 🚀
-```
+**Destaques:** encapsulamento, separação de responsabilidades, estados de vitória/derrota e código modular.  
+**[Ver projeto](https://github.com/MarcusMouraDev/Meu-Portif-lio-/blob/main/jogo-da-forca-poo/jogo_da_forca.py)**
 
----
+## 🤖 Em construção
 
-## 📊 GitHub Analytics
+### JARVIS — assistente pessoal com IA
 
-<div align="center">
+Estou desenvolvendo uma arquitetura de assistente que combina **IA local com Ollama**, memória controlada, habilidades reutilizáveis e fallback em nuvem. A proposta é automatizar tarefas do dia a dia sem perder controle, privacidade e transparência.
 
-<img height="170" alt="Estatísticas do GitHub de Marcus Paulo" src="https://github-readme-stats.vercel.app/api?username=MarcusMouraDev&show_icons=true&theme=tokyonight&hide_border=true"/>
+Próximos marcos: organizar módulos, documentar decisões de arquitetura e publicar uma primeira demonstração reproduzível.
 
-<img height="170" alt="Linguagens mais utilizadas nos repositórios" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarcusMouraDev&layout=compact&theme=tokyonight&hide_border=true"/>
+## 📚 Agora
 
-</div>
+- Aprofundando Python, orientação a objetos e boas práticas de engenharia de software
+- Construindo integrações entre APIs, bancos de dados e automações
+- Experimentando agentes de IA com execução local e ferramentas controladas
+- Evoluindo projetos acadêmicos para produtos documentados e demonstráveis
 
-<br>
+## 🤝 Vamos conversar
 
-<div align="center">
+Se você trabalha com Python, automação, IA aplicada ou produtos que resolvem problemas reais, será um prazer trocar ideias.
 
-<img alt="Sequência de contribuições de Marcus Paulo" src="https://streak-stats.demolab.com?user=MarcusMouraDev&theme=tokyonight&hide_border=true"/>
+<p align="center">
+  <a href="https://www.linkedin.com/in/marcuspaulomoura">
+    <img src="https://img.shields.io/badge/Conectar_no_LinkedIn-A855F7?style=for-the-badge&logo=linkedin&logoColor=white" alt="Conectar com Marcus Moura no LinkedIn" />
+  </a>
+  <a href="https://github.com/MarcusMouraDev?tab=repositories">
+    <img src="https://img.shields.io/badge/Explorar_reposit%C3%B3rios-050505?style=for-the-badge&logo=github&logoColor=white" alt="Explorar os repositórios de Marcus Moura" />
+  </a>
+</p>
 
-</div>
+<p align="center">
+  <strong>Software bom começa com um problema real bem compreendido.</strong>
+</p>
 
----
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-<img alt="Troféus do perfil de Marcus Paulo" src="https://github-profile-trophy.vercel.app/?username=MarcusMouraDev&theme=tokyonight&no-frame=true&margin-w=15"/>
-
-</div>
-
----
-
-## 🐍 Contribution Animation
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MarcusMouraDev/MarcusMouraDev/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MarcusMouraDev/MarcusMouraDev/output/github-contribution-grid-snake.svg"/>
-  <img alt="Animação da grade de contribuições de Marcus Paulo" src="https://raw.githubusercontent.com/MarcusMouraDev/MarcusMouraDev/output/github-contribution-grid-snake.svg"/>
-</picture>
-
-</div>
-
----
-
-## 🌎 Connect With Me
-
-<div align="center">
-
-<a href="https://github.com/MarcusMouraDev">
-<img alt="GitHub" src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github"/>
-</a>
-
-<a href="https://www.linkedin.com/in/marcus-paulo-00a2833a6">
-<img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-8A2BE2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-
-<a href="https://marcus-moura-portfolio.mpfagundesmoura.chatgpt.site">
-<img alt="Portfólio profissional" src="https://img.shields.io/badge/Portfolio-A855F7?style=for-the-badge&logo=googlechrome&logoColor=white"/>
-</a>
-
-<a href="https://monitor-tasks.mpfagundesmoura.chatgpt.site">
-<img alt="Monitor de Tasks" src="https://img.shields.io/badge/Task_Monitor-6D28D9?style=for-the-badge&logoColor=white"/>
-</a>
-
-<a href="https://saldo-financas-local.mpfagundesmoura.chatgpt.site">
-<img alt="O RPG das suas finanças" src="https://img.shields.io/badge/RPG_Financeiro-8A2BE2?style=for-the-badge&logoColor=white"/>
-</a>
-
-</div>
-
----
-
-<div align="center">
-
-### 💜 "Transforming real processes into software, automation and digital experiences."
-
-<img alt="Contador de visualizações do perfil" src="https://komarev.com/ghpvc/?username=MarcusMouraDev&style=for-the-badge&color=8A2BE2"/>
-
-</div>
-
-<img width="100%" alt="Rodapé decorativo" src="https://capsule-render.vercel.app/api?type=waving&height=150&section=footer&color=0:050505,50:6d28d9,100:a855f7"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:050505,48:6D28D9,100:A855F7" alt="Rodapé decorativo em gradiente roxo" />
