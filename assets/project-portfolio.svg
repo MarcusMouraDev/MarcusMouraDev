@@ -1,0 +1,125 @@
+<svg xmlns="&#104;ttp://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="portfolio-title portfolio-summary">
+  <title id="portfolio-title">Portfólio — Marcus Moura</title>
+  <desc id="portfolio-summary">Card de acesso ao portfólio, com grade técnica, circuitos e uma rede de projetos.</desc>
+  <defs>
+    <linearGradient id="portfolio-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A4FFF"/>
+      <stop offset="1" stop-color="#00D9FF"/>
+    </linearGradient>
+    <radialGradient id="portfolio-glow" cx="78%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#0A4FFF" stop-opacity="0.24"/>
+      <stop offset="0.65" stop-color="#0077FF" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#020817" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="portfolio-scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00D9FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#00D9FF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#00D9FF" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="portfolio-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00D9FF" stroke-width="1" stroke-opacity="0.12"/>
+      <path d="M 20 0 V 40 M 0 20 H 40" fill="none" stroke="#0A4FFF" stroke-width="0.5" stroke-opacity="0.07"/>
+    </pattern>
+    <filter id="portfolio-soft-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="portfolio-clip">
+      <rect x="24" y="24" width="1152" height="252" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .status, .stack, .cta, .node-label {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      letter-spacing: 1.7px;
+    }
+    .status { fill: #8DB7D6; font-size: 14px; font-weight: 700; }
+    .title {
+      fill: #EAF8FF;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 31px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .description {
+      fill: #8DB7D6;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+    }
+    .stack { fill: #00D9FF; font-size: 13px; font-weight: 700; }
+    .cta { fill: #EAF8FF; font-size: 16px; font-weight: 800; }
+    .node-label { fill: #8DB7D6; font-size: 9px; }
+    .scan-line { animation: portfolio-scan-pass 8s ease-in-out infinite; }
+    .live-pulse { animation: portfolio-live-pulse 4.8s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+    .data-flow { animation: portfolio-flow 7s linear infinite; }
+    @keyframes portfolio-scan-pass {
+      0%, 8% { transform: translateY(-58px); opacity: 0.18; }
+      18%, 82% { opacity: 0.7; }
+      92%, 100% { transform: translateY(318px); opacity: 0.18; }
+    }
+    @keyframes portfolio-live-pulse {
+      0%, 100% { opacity: 0.58; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.14); }
+    }
+    @keyframes portfolio-flow {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -56; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <rect width="1200" height="300" fill="#020817"/>
+  <rect width="1200" height="300" fill="url(#portfolio-glow)"/>
+  <g clip-path="url(#portfolio-clip)">
+    <rect x="24" y="24" width="1152" height="252" fill="url(#portfolio-grid)"/>
+    <rect class="scan-line" x="24" y="24" width="1152" height="56" fill="url(#portfolio-scan)" opacity="0.7"/>
+  </g>
+
+  <path d="M 48 24 H 218 M 24 48 V 102 M 982 24 H 1152 L 1176 48 V 102 M 24 198 V 252 L 48 276 H 218 M 982 276 H 1152 L 1176 252 V 198"
+        fill="none" stroke="url(#portfolio-gradient)" stroke-width="2"/>
+  <rect x="36" y="36" width="1128" height="228" rx="7" fill="none" stroke="#0077FF" stroke-width="1" stroke-opacity="0.44"/>
+  <path d="M 36 105 H 53 M 36 195 H 53 M 1147 105 H 1164 M 1147 195 H 1164" stroke="#00D9FF" stroke-width="2"/>
+
+  <g aria-hidden="true">
+    <circle cx="278" cy="67" r="10" fill="#00D9FF" opacity="0.12" filter="url(#portfolio-soft-glow)"/>
+    <circle class="live-pulse" cx="278" cy="67" r="4" fill="#00D9FF"/>
+
+    <path class="data-flow" d="M 806 82 H 862 L 900 118 H 970 L 1010 78 H 1096 M 842 218 H 902 L 940 180 H 1018 L 1060 218 H 1120 M 900 118 V 180 M 1010 78 L 1018 180"
+          fill="none" stroke="#0077FF" stroke-width="2" stroke-dasharray="8 6" stroke-opacity="0.75"/>
+    <path d="M 806 82 H 862 L 900 118 H 970 L 1010 78 H 1096 M 842 218 H 902 L 940 180 H 1018 L 1060 218 H 1120 M 900 118 V 180 M 1010 78 L 1018 180"
+          fill="none" stroke="#0A4FFF" stroke-width="1" stroke-opacity="0.55"/>
+    <g fill="#020817" stroke="#00D9FF" stroke-width="2">
+      <circle cx="806" cy="82" r="6"/>
+      <circle cx="900" cy="118" r="9"/>
+      <circle cx="940" cy="180" r="7"/>
+      <circle cx="1010" cy="78" r="7"/>
+      <circle cx="1018" cy="180" r="10"/>
+      <circle cx="1120" cy="218" r="6"/>
+    </g>
+    <g fill="#00D9FF">
+      <circle cx="806" cy="82" r="2"/>
+      <circle cx="900" cy="118" r="3"/>
+      <circle cx="940" cy="180" r="2"/>
+      <circle cx="1010" cy="78" r="2"/>
+      <circle cx="1018" cy="180" r="3"/>
+      <circle cx="1120" cy="218" r="2"/>
+    </g>
+    <text x="874" y="105" class="node-label">API</text>
+    <text x="1029" y="174" class="node-label">WEB</text>
+    <text x="1048" y="69" class="node-label">PY</text>
+  </g>
+
+  <text x="72" y="72" class="status">DEPLOYMENT 01 // LIVE</text>
+  <text x="72" y="127" class="title">PORTFÓLIO — MARCUS MOURA</text>
+  <text x="72" y="165" class="description">Projetos em Python, web, APIs, automação e experiências mobile.</text>
+  <text x="72" y="205" class="stack">PYTHON  ·  WEB  ·  APIs  ·  AUTOMATION</text>
+  <text x="72" y="251" class="cta">ACCESS PORTFOLIO  →</text>
+  <rect x="72" y="262" width="214" height="2" fill="url(#portfolio-gradient)"/>
+</svg>

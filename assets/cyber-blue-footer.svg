@@ -1,0 +1,61 @@
+<svg xmlns="&#104;ttp://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1200 150" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="footer-title footer-summary">
+  <title id="footer-title">End of transmission</title>
+  <desc id="footer-summary">Cyber Blue closing banner for MarcusMouraDev.</desc>
+  <defs>
+    <linearGradient id="footer-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A4FFF"/>
+      <stop offset="1" stop-color="#00D9FF"/>
+    </linearGradient>
+    <radialGradient id="footer-glow" cx="50%" cy="0" r="78%">
+      <stop offset="0" stop-color="#0A4FFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#020817" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="footer-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00D9FF" stroke-width="1" stroke-opacity="0.10"/>
+      <path d="M 20 0 V 40 M 0 20 H 40" fill="none" stroke="#0A4FFF" stroke-width="0.5" stroke-opacity="0.06"/>
+    </pattern>
+    <filter id="footer-soft-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .closing, .meta {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      letter-spacing: 2px;
+    }
+    .closing { fill: #EAF8FF; font-size: 20px; font-weight: 700; }
+    .meta { fill: #8DB7D6; font-size: 13px; font-weight: 600; }
+    .pulse-node { animation: pulse 6s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.46; transform: scale(0.86); }
+      50% { opacity: 1; transform: scale(1.14); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <rect width="1200" height="150" fill="#020817"/>
+  <rect width="1200" height="150" fill="url(#footer-glow)"/>
+  <rect width="1200" height="150" fill="url(#footer-grid)"/>
+  <path d="M 24 24 H 260 M 940 24 H 1176 M 24 126 H 260 M 940 126 H 1176"
+        fill="none" stroke="url(#footer-gradient)" stroke-width="2"/>
+  <path d="M 24 24 V 54 M 1176 24 V 54 M 24 96 V 126 M 1176 96 V 126"
+        fill="none" stroke="#0077FF" stroke-width="1" stroke-opacity="0.72"/>
+
+  <g aria-hidden="true">
+    <line x1="384" y1="33" x2="570" y2="33" stroke="#0A4FFF" stroke-width="1" stroke-opacity="0.7"/>
+    <line x1="630" y1="33" x2="816" y2="33" stroke="#0A4FFF" stroke-width="1" stroke-opacity="0.7"/>
+    <circle cx="600" cy="33" r="13" fill="#00D9FF" opacity="0.12" filter="url(#footer-soft-glow)"/>
+    <circle class="pulse-node" cx="600" cy="33" r="4" fill="#00D9FF"/>
+  </g>
+
+  <text x="600" y="72" text-anchor="middle" class="closing">END OF TRANSMISSION // KEEP BUILDING</text>
+  <text x="600" y="105" text-anchor="middle" class="meta">MARCUSMOURADEV · 2026</text>
+  <rect x="480" y="121" width="240" height="2" fill="url(#footer-gradient)" opacity="0.82"/>
+</svg>
