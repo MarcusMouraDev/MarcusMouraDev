@@ -1,101 +1,96 @@
-<svg xmlns="&#104;ttp://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="hero-title hero-summary">
+<svg xmlns="&#104;ttp://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 720 280" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="hero-title hero-summary">
   <title id="hero-title">Marcus Paulo Moura — Software Engineering</title>
-  <desc id="hero-summary">Cyber Blue profile banner with engineering specialties and location.</desc>
+  <desc id="hero-summary">Cyber Blue profile banner. System online in Belo Horizonte, with software engineering, Python, automation and applied AI. BUILDING USEFUL SYSTEMS FROM REAL-WORLD PROBLEMS.</desc>
   <defs>
     <linearGradient id="cyber-gradient" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#0A4FFF"/>
       <stop offset="1" stop-color="#00D9FF"/>
     </linearGradient>
-    <radialGradient id="blue-glow" cx="78%" cy="38%" r="58%">
+    <radialGradient id="blue-glow" cx="80%" cy="35%" r="66%">
       <stop offset="0" stop-color="#0A4FFF" stop-opacity="0.28"/>
       <stop offset="0.62" stop-color="#0A4FFF" stop-opacity="0.05"/>
       <stop offset="1" stop-color="#020817" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="scan-gradient" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#00D9FF" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#00D9FF" stop-opacity="0.42"/>
+      <stop offset="0.5" stop-color="#00D9FF" stop-opacity="0.38"/>
       <stop offset="1" stop-color="#00D9FF" stop-opacity="0"/>
     </linearGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00D9FF" stroke-width="1" stroke-opacity="0.16"/>
-      <path d="M 20 0 V 40 M 0 20 H 40" fill="none" stroke="#0A4FFF" stroke-width="0.5" stroke-opacity="0.08"/>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#00D9FF" stroke-width="1" stroke-opacity="0.14"/>
+      <path d="M 16 0 V 32 M 0 16 H 32" fill="none" stroke="#0A4FFF" stroke-width="0.5" stroke-opacity="0.08"/>
     </pattern>
-    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+    <filter id="soft-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
     <clipPath id="frame-clip">
-      <rect x="24" y="24" width="1152" height="312" rx="12"/>
+      <rect x="16" y="16" width="688" height="248" rx="10"/>
     </clipPath>
   </defs>
 
   <style>
-    .eyebrow, .role, .signal, .hud-label {
+    .eyebrow, .role, .signal {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      letter-spacing: 2px;
+      font-weight: 700;
     }
-    .eyebrow { fill: #EAF8FF; font-size: 18px; font-weight: 600; }
+    .eyebrow { fill: #EAF8FF; font-size: 23px; letter-spacing: 1.3px; }
     .name {
       fill: url(#cyber-gradient);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 55px;
+      font-size: 44px;
       font-weight: 800;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
     }
-    .role { fill: #EAF8FF; font-size: 20px; font-weight: 600; }
-    .signal { fill: #8DB7D6; font-size: 16px; font-weight: 600; }
-    .hud-label { fill: #8DB7D6; font-size: 11px; }
+    .role { fill: #EAF8FF; font-size: 23.5px; letter-spacing: 1.1px; }
+    .signal { fill: #8DB7D6; font-size: 22.5px; letter-spacing: 0.8px; }
     .scan-line { animation: scan 8s ease-in-out infinite; }
     .pulse-node { animation: pulse 4.8s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
     .grid-shift { animation: drift 12s ease-in-out infinite alternate; }
     @keyframes scan {
-      0%, 8% { transform: translateY(-68px); opacity: 0; }
-      18% { opacity: 0.72; }
-      82% { opacity: 0.72; }
-      92%, 100% { transform: translateY(380px); opacity: 0; }
+      0%, 8% { transform: translateY(-54px); opacity: 0; }
+      18%, 82% { opacity: 0.68; }
+      92%, 100% { transform: translateY(296px); opacity: 0; }
     }
     @keyframes pulse {
       0%, 100% { opacity: 0.55; transform: scale(0.88); }
       50% { opacity: 1; transform: scale(1.12); }
     }
     @keyframes drift {
-      from { transform: translate3d(-8px, -4px, 0); }
-      to { transform: translate3d(8px, 4px, 0); }
+      from { transform: translate3d(-6px, -3px, 0); }
+      to { transform: translate3d(6px, 3px, 0); }
     }
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; }
     }
   </style>
 
-  <rect width="1200" height="360" fill="#020817"/>
-  <rect width="1200" height="360" fill="url(#blue-glow)"/>
+  <rect width="720" height="280" fill="#020817"/>
+  <rect width="720" height="280" fill="url(#blue-glow)"/>
   <g clip-path="url(#frame-clip)">
-    <rect class="grid-shift" x="-16" y="-12" width="1232" height="384" fill="url(#grid)" opacity="0.92"/>
-    <rect class="scan-line" x="24" y="0" width="1152" height="64" fill="url(#scan-gradient)" opacity="0.72"/>
+    <rect class="grid-shift" x="-12" y="-10" width="744" height="300" fill="url(#grid)" opacity="0.9"/>
+    <rect class="scan-line" x="16" y="0" width="688" height="52" fill="url(#scan-gradient)" opacity="0.68"/>
   </g>
 
-  <path d="M 48 24 H 216 M 24 48 V 114 M 984 24 H 1152 L 1176 48 V 114 M 24 246 V 312 L 48 336 H 216 M 984 336 H 1152 L 1176 312 V 246"
-        fill="none" stroke="url(#cyber-gradient)" stroke-width="2" stroke-linecap="square"/>
-  <rect x="36" y="36" width="1128" height="288" rx="8" fill="none" stroke="#0077FF" stroke-width="1" stroke-opacity="0.42"/>
-  <path d="M 36 116 H 54 M 36 244 H 54 M 1146 116 H 1164 M 1146 244 H 1164"
-        stroke="#00D9FF" stroke-width="2"/>
+  <path d="M 34 16 H 150 M 16 34 V 88 M 570 16 H 686 L 704 34 V 88 M 16 192 V 246 L 34 264 H 150 M 570 264 H 686 L 704 246 V 192"
+        fill="none" stroke="url(#cyber-gradient)" stroke-width="2"/>
+  <rect x="24" y="24" width="672" height="232" rx="7" fill="none" stroke="#0077FF" stroke-width="1" stroke-opacity="0.45"/>
+  <path d="M 24 94 H 39 M 24 186 H 39 M 681 94 H 696 M 681 186 H 696" stroke="#00D9FF" stroke-width="2"/>
 
   <g aria-hidden="true">
-    <circle cx="1113" cy="71" r="13" fill="#00D9FF" opacity="0.12" filter="url(#soft-glow)"/>
-    <circle class="pulse-node" cx="1113" cy="71" r="5" fill="#00D9FF"/>
-    <text x="1069" y="101" class="hud-label">LIVE</text>
-    <path d="M 1040 288 H 1118 M 1079 249 V 327" stroke="#0A4FFF" stroke-width="1" stroke-opacity="0.68"/>
-    <circle cx="1079" cy="288" r="27" fill="none" stroke="#00D9FF" stroke-width="1" stroke-dasharray="4 6" opacity="0.62"/>
-    <circle cx="1079" cy="288" r="5" fill="#0A4FFF"/>
-    <text x="1016" y="326" class="hud-label">NODE // 01</text>
+    <circle cx="671" cy="44" r="12" fill="#00D9FF" opacity="0.12" filter="url(#soft-glow)"/>
+    <circle class="pulse-node" cx="671" cy="44" r="4" fill="#00D9FF"/>
+    <path d="M 618 224 H 672 M 645 197 V 251" stroke="#0A4FFF" stroke-width="1" stroke-opacity="0.62"/>
+    <circle cx="645" cy="224" r="20" fill="none" stroke="#00D9FF" stroke-width="1" stroke-dasharray="4 6" opacity="0.54"/>
   </g>
 
-  <text x="72" y="92" class="eyebrow">SYSTEM ONLINE  //  BELO HORIZONTE · BR</text>
-  <text x="72" y="190" class="name">MARCUS PAULO MOURA</text>
-  <text x="72" y="238" class="role">SOFTWARE ENGINEERING // PYTHON // AUTOMATION // APPLIED AI</text>
-  <text x="72" y="300" class="signal">BUILDING USEFUL SYSTEMS FROM REAL-WORLD PROBLEMS</text>
-  <rect x="72" y="316" width="484" height="3" fill="url(#cyber-gradient)"/>
+  <text x="40" y="52" class="eyebrow">SYSTEM ONLINE // BELO HORIZONTE · BR</text>
+  <text x="40" y="113" class="name">MARCUS PAULO MOURA</text>
+  <text x="40" y="158" class="role">SOFTWARE ENGINEERING // PYTHON</text>
+  <text x="40" y="194" class="role">AUTOMATION // APPLIED AI</text>
+  <text x="40" y="238" class="signal">BUILDING USEFUL SYSTEMS // REAL PROBLEMS</text>
+  <rect x="40" y="248" width="522" height="3" fill="url(#cyber-gradient)"/>
 </svg>

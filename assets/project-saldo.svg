@@ -1,19 +1,19 @@
-<svg xmlns="&#104;ttp://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="saldo-title saldo-summary">
+<svg xmlns="&#104;ttp://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 720 240" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="saldo-title saldo-summary">
   <title id="saldo-title">Saldo — RPG Financeiro</title>
-  <desc id="saldo-summary">Card de acesso ao Saldo, com trilha de progresso, missões e um tesouro geométrico.</desc>
+  <desc id="saldo-summary">Organização financeira transformada em campanha, missões e progresso. Deployment ao vivo e local-first.</desc>
   <defs>
     <linearGradient id="saldo-gradient" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#0A4FFF"/>
       <stop offset="1" stop-color="#00D9FF"/>
     </linearGradient>
-    <radialGradient id="saldo-glow" cx="82%" cy="44%" r="54%">
+    <radialGradient id="saldo-glow" cx="84%" cy="40%" r="62%">
       <stop offset="0" stop-color="#0077FF" stop-opacity="0.22"/>
       <stop offset="0.68" stop-color="#0A4FFF" stop-opacity="0.05"/>
       <stop offset="1" stop-color="#020817" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="saldo-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00D9FF" stroke-width="1" stroke-opacity="0.09"/>
-      <path d="M 20 0 V 40 M 0 20 H 40" fill="none" stroke="#0A4FFF" stroke-width="0.5" stroke-opacity="0.06"/>
+    <pattern id="saldo-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#00D9FF" stroke-width="1" stroke-opacity="0.09"/>
+      <path d="M 16 0 V 32 M 0 16 H 32" fill="none" stroke="#0A4FFF" stroke-width="0.5" stroke-opacity="0.06"/>
     </pattern>
     <filter id="saldo-soft-glow" x="-100%" y="-100%" width="300%" height="300%">
       <feGaussianBlur stdDeviation="4" result="blur"/>
@@ -25,27 +25,20 @@
   </defs>
 
   <style>
-    .status, .stack, .cta, .mission-label {
+    .status, .stack, .cta {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      letter-spacing: 1.7px;
+      font-weight: 700;
     }
-    .status { fill: #8DB7D6; font-size: 14px; font-weight: 700; }
+    .status { fill: #8DB7D6; font-size: 23px; letter-spacing: 1px; }
     .title {
       fill: #EAF8FF;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 31px;
+      font-size: 37px;
       font-weight: 800;
-      letter-spacing: 1px;
+      letter-spacing: 0.6px;
     }
-    .description {
-      fill: #8DB7D6;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 17px;
-      font-weight: 500;
-    }
-    .stack { fill: #00D9FF; font-size: 13px; font-weight: 700; }
-    .cta { fill: #EAF8FF; font-size: 16px; font-weight: 800; }
-    .mission-label { fill: #8DB7D6; font-size: 9px; }
+    .stack { fill: #00D9FF; font-size: 22.5px; letter-spacing: 0.8px; }
+    .cta { fill: #EAF8FF; font-size: 24px; letter-spacing: 1px; }
     .live-pulse { animation: saldo-live-pulse 5.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
     .progress-signal { animation: saldo-progress 7.5s ease-in-out infinite; }
     .coin-orbit { animation: saldo-orbit 9s linear infinite; transform-origin: center; transform-box: fill-box; }
@@ -54,7 +47,7 @@
       50% { opacity: 1; transform: scale(1.14); }
     }
     @keyframes saldo-progress {
-      0%, 100% { stroke-dashoffset: 58; opacity: 0.55; }
+      0%, 100% { stroke-dashoffset: 48; opacity: 0.55; }
       50% { stroke-dashoffset: 0; opacity: 1; }
     }
     @keyframes saldo-orbit {
@@ -66,51 +59,33 @@
     }
   </style>
 
-  <rect width="1200" height="300" fill="#020817"/>
-  <rect width="1200" height="300" fill="url(#saldo-glow)"/>
-  <rect x="24" y="24" width="1152" height="252" rx="10" fill="url(#saldo-grid)"/>
+  <rect width="720" height="240" fill="#020817"/>
+  <rect width="720" height="240" fill="url(#saldo-glow)"/>
+  <rect x="16" y="16" width="688" height="208" rx="9" fill="url(#saldo-grid)"/>
 
-  <path d="M 48 24 H 218 M 24 48 V 102 M 982 24 H 1152 L 1176 48 V 102 M 24 198 V 252 L 48 276 H 218 M 982 276 H 1152 L 1176 252 V 198"
+  <path d="M 34 16 H 148 M 16 34 V 78 M 572 16 H 686 L 704 34 V 78 M 16 162 V 206 L 34 224 H 148 M 572 224 H 686 L 704 206 V 162"
         fill="none" stroke="url(#saldo-gradient)" stroke-width="2"/>
-  <rect x="36" y="36" width="1128" height="228" rx="7" fill="none" stroke="#0077FF" stroke-width="1" stroke-opacity="0.44"/>
-  <path d="M 36 105 H 53 M 36 195 H 53 M 1147 105 H 1164 M 1147 195 H 1164" stroke="#00D9FF" stroke-width="2"/>
+  <rect x="24" y="24" width="672" height="192" rx="7" fill="none" stroke="#0077FF" stroke-width="1" stroke-opacity="0.44"/>
 
   <g aria-hidden="true">
-    <circle cx="278" cy="67" r="10" fill="#00D9FF" opacity="0.12" filter="url(#saldo-soft-glow)"/>
-    <circle class="live-pulse" cx="278" cy="67" r="4" fill="#00D9FF"/>
-
-    <path d="M 828 216 C 864 216 864 180 900 180 S 936 216 972 216 S 1008 180 1044 180 S 1080 216 1116 216"
-          fill="none" stroke="#0A4FFF" stroke-width="6" stroke-linecap="round" stroke-opacity="0.45"/>
-    <path class="progress-signal" d="M 828 216 C 864 216 864 180 900 180 S 936 216 972 216 S 1008 180 1044 180 S 1080 216 1116 216"
-          fill="none" stroke="#00D9FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="58 230"/>
-    <g fill="#020817" stroke="#00D9FF" stroke-width="2">
-      <circle cx="864" cy="199" r="7"/>
-      <circle cx="972" cy="216" r="7"/>
-      <circle cx="1080" cy="199" r="7"/>
+    <circle cx="590" cy="45" r="10" fill="#00D9FF" opacity="0.12" filter="url(#saldo-soft-glow)"/>
+    <circle class="live-pulse" cx="590" cy="45" r="4" fill="#00D9FF"/>
+    <g transform="translate(648 82)">
+      <circle cx="0" cy="0" r="38" fill="#0A4FFF" opacity="0.1" filter="url(#saldo-soft-glow)"/>
+      <circle class="coin-orbit" cx="0" cy="0" r="32" fill="none" stroke="#0077FF" stroke-width="1" stroke-dasharray="5 7" opacity="0.8"/>
+      <path d="M -27 -8 L -19 -20 H 19 L 27 -8 V 20 H -27 Z" fill="#020817" stroke="#00D9FF" stroke-width="2"/>
+      <path d="M -27 -8 H 27 M -19 -20 L -12 -8 M 19 -20 L 12 -8" fill="none" stroke="#0077FF" stroke-width="2"/>
+      <polygon points="0,-1 8,5 5,15 -5,15 -8,5" fill="#0A4FFF" stroke="#00D9FF" stroke-width="2"/>
     </g>
-    <g fill="#00D9FF">
-      <circle cx="864" cy="199" r="2"/>
-      <circle cx="972" cy="216" r="2"/>
-      <circle cx="1080" cy="199" r="2"/>
-    </g>
-    <text x="846" y="228" class="mission-label">M01</text>
-    <text x="954" y="244" class="mission-label">M02</text>
-    <text x="1062" y="228" class="mission-label">M03</text>
-
-    <g transform="translate(980 105)">
-      <circle cx="0" cy="0" r="58" fill="#0A4FFF" opacity="0.10" filter="url(#saldo-soft-glow)"/>
-      <circle class="coin-orbit" cx="0" cy="0" r="49" fill="none" stroke="#0077FF" stroke-width="1" stroke-dasharray="5 8" opacity="0.8"/>
-      <path d="M -42 -12 L -30 -31 H 30 L 42 -12 V 30 H -42 Z" fill="#020817" stroke="#00D9FF" stroke-width="2"/>
-      <path d="M -42 -12 H 42 M -30 -31 L -19 -12 M 30 -31 L 19 -12" fill="none" stroke="#0077FF" stroke-width="2"/>
-      <polygon points="0,-1 12,8 7,23 -7,23 -12,8" fill="#0A4FFF" stroke="#00D9FF" stroke-width="2"/>
-      <circle cx="0" cy="10" r="3" fill="#EAF8FF"/>
-    </g>
+    <path d="M 500 190 C 526 190 526 168 552 168 S 578 190 604 190 S 630 168 656 168 S 682 190 696 190"
+          fill="none" stroke="#0A4FFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.42"/>
+    <path class="progress-signal" d="M 500 190 C 526 190 526 168 552 168 S 578 190 604 190 S 630 168 656 168 S 682 190 696 190"
+          fill="none" stroke="#00D9FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="48 180"/>
   </g>
 
-  <text x="72" y="72" class="status">DEPLOYMENT 02 // LIVE // LOCAL-FIRST</text>
-  <text x="72" y="127" class="title">SALDO — RPG FINANCEIRO</text>
-  <text x="72" y="165" class="description">Organização financeira transformada em campanha, missões e progresso.</text>
-  <text x="72" y="205" class="stack">PRIVACY  ·  GOALS  ·  BUDGET  ·  PROGRESS</text>
-  <text x="72" y="251" class="cta">START CAMPAIGN  →</text>
-  <rect x="72" y="262" width="200" height="2" fill="url(#saldo-gradient)"/>
+  <text x="40" y="51" class="status">DEPLOYMENT 02 // LIVE // LOCAL-FIRST</text>
+  <text x="40" y="103" class="title">SALDO — RPG FINANCEIRO</text>
+  <text x="40" y="151" class="stack">PRIVACY · GOALS · BUDGET · PROGRESS</text>
+  <text x="40" y="204" class="cta">START CAMPAIGN  →</text>
+  <rect x="40" y="213" width="252" height="3" fill="url(#saldo-gradient)"/>
 </svg>
