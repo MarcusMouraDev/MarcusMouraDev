@@ -28,7 +28,7 @@
 
 <pre>
 LOCATION    Belo Horizonte · Brasil
-EDUCATION   Engenharia de Software · UNA · 2026—2029
+EDUCATION   Engenharia de Software · UNA
 FOCUS       Python · APIs REST · SQL · automação
 EXPLORING   IA local · agentes · produtos úteis
 LANGUAGES   Português nativo · inglês intermediário

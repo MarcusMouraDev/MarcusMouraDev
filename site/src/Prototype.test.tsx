@@ -1,10 +1,31 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { Prototype } from "./Prototype";
 import "./prototype.css";
 
+function stubMatchMedia(matchesQuery: (query: string) => boolean) {
+  vi.stubGlobal(
+    "matchMedia",
+    (query: string) =>
+      ({
+        matches: matchesQuery(query),
+        media: query,
+        onchange: null,
+        addListener: () => undefined,
+        removeListener: () => undefined,
+        addEventListener: () => undefined,
+        removeEventListener: () => undefined,
+        dispatchEvent: () => false,
+      }) satisfies MediaQueryList,
+  );
+}
+
 describe("portfolio experience", () => {
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
   it("presents the approved first impression and public navigation", () => {
     render(<Prototype />);
 
@@ -14,6 +35,10 @@ describe("portfolio experience", () => {
         name: /ideias ganham forma\. processos viram produto\./i,
       }),
     ).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Marcus Moura, início" })).toHaveAttribute(
+      "href",
+      "#top",
+    );
     expect(screen.getByRole("link", { name: "Projetos" })).toHaveAttribute(
       "href",
       "#projetos",
@@ -26,6 +51,13 @@ describe("portfolio experience", () => {
       "href",
       "#contato",
     );
+    expect(screen.getAllByRole("link", { name: "Conversar" }).length).toBeGreaterThan(0);
+    expect(screen.getByRole("link", { name: /conhecer projetos/i })).toHaveAttribute(
+      "href",
+      "#projetos",
+    );
+    expect(screen.getByText(/transformo processos reais/i)).toHaveTextContent(/11 projetos/i);
+    expect(screen.queryByText("11 projetos no arquivo")).not.toBeInTheDocument();
   });
 
   it("renders 11 archive entries and keeps the AI lab clearly marked", () => {
@@ -49,7 +81,9 @@ describe("portfolio experience", () => {
     const archive = screen.getByRole("region", { name: "Arquivo de projetos" });
     await user.click(screen.getByRole("button", { name: "Dados" }));
     expect(within(archive).getAllByRole("article")).toHaveLength(1);
-    expect(screen.getByText("11 projetos no arquivo")).toBeInTheDocument();
+    expect(screen.queryByText("11 projetos no arquivo")).not.toBeInTheDocument();
+    expect(screen.getByText("Públicos e privados selecionados")).toBeInTheDocument();
+    expect(screen.queryByText(/5 repositórios analisados/i)).not.toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Todos" }));
     expect(within(archive).getAllByRole("article")).toHaveLength(11);
@@ -69,6 +103,16 @@ describe("portfolio experience", () => {
     expect(getComputedStyle(document.querySelector(".dialog-backdrop")!).pointerEvents).toBe(
       "none",
     );
+  });
+
+  it("keeps process board copy visible when motion is reduced", () => {
+    stubMatchMedia((query) => query.includes("prefers-reduced-motion"));
+    render(<Prototype />);
+
+    expect(screen.getByText("Evento")).toBeVisible();
+    expect(screen.getByText("Processar dados")).toBeVisible();
+    expect(screen.getByText("Fontes")).toBeVisible();
+    expect(screen.getAllByText("Memória").length).toBeGreaterThan(0);
   });
 
   it("persists an explicit dark theme preference", async () => {

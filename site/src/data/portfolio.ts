@@ -1,3 +1,5 @@
+import { mailTo } from "./site";
+
 export type PortfolioCategory =
   | "Automação"
   | "Dados"
@@ -23,10 +25,7 @@ export type PortfolioItem = {
   featured: boolean;
 };
 
-const demoLink = (project: string) =>
-  `mailto:mpfagundesmoura@gmail.com?subject=${encodeURIComponent(
-    `Demonstração do projeto ${project}`,
-  )}`;
+const demoLink = (project: string) => mailTo(`Demonstração do projeto ${project}`);
 
 export const portfolioItems: PortfolioItem[] = [
   {
@@ -259,8 +258,7 @@ export const portfolioItems: PortfolioItem[] = [
       "Uma arquitetura em evolução para transformar intenção em ações observáveis e reutilizáveis.",
     technologies: ["Python", "Ollama", "Agentes", "Automação"],
     flow: ["Entender contexto", "Consultar memória", "Escolher habilidade", "Executar ação"],
-    href:
-      "mailto:mpfagundesmoura@gmail.com?subject=Conversa%20sobre%20o%20Assistente%20Pessoal%20de%20IA",
+    href: mailTo("Conversa sobre o Assistente Pessoal de IA"),
     featured: true,
   },
 ];

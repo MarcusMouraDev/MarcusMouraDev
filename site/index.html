@@ -7,15 +7,66 @@
       name="description"
       content="Portfólio de Marcus Moura: software, automação, dados e inteligência artificial aplicada a processos reais."
     />
-    <meta name="theme-color" content="#f4f0e7" />
+    <meta name="theme-color" content="#f3f4f1" />
+    <meta name="theme-color" content="#f3f4f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e1112" media="(prefers-color-scheme: dark)" />
+    <meta name="author" content="Marcus Moura" />
+    <link rel="canonical" href="https://marcus-moura-portfolio.mpfagundesmoura.chatgpt.site/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="Marcus Moura — Software, automação, dados e IA" />
+    <meta property="og:site_name" content="Marcus Moura" />
+    <meta property="og:url" content="https://marcus-moura-portfolio.mpfagundesmoura.chatgpt.site/" />
+    <meta property="og:title" content="Marcus Moura - Software, automação, dados e IA" />
     <meta
       property="og:description"
       content="Ideias ganham forma. Processos viram produto."
     />
-    <title>Marcus Moura — Software, automação, dados e IA</title>
+    <meta property="og:image" content="https://marcus-moura-portfolio.mpfagundesmoura.chatgpt.site/og-image.png" />
+    <meta property="og:image:alt" content="Marcus Moura. Software, automação, dados e IA." />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Marcus Moura - Software, automação, dados e IA" />
+    <meta
+      name="twitter:description"
+      content="Ideias ganham forma. Processos viram produto."
+    />
+    <meta name="twitter:image" content="https://marcus-moura-portfolio.mpfagundesmoura.chatgpt.site/og-image.png" />
+    <title>Marcus Moura - Software, automação, dados e IA</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marcus Moura",
+        "url": "https://marcus-moura-portfolio.mpfagundesmoura.chatgpt.site/",
+        "email": "mailto:mpfagundesmoura@gmail.com",
+        "jobTitle": "Estudante de Engenharia de Software",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Belo Horizonte",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://github.com/MarcusMouraDev",
+          "https://www.linkedin.com/in/marcuspaulomoura"
+        ]
+      }
+    </script>
+    <script>
+      (function () {
+        var stored = localStorage.getItem("mm-theme");
+        var theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
