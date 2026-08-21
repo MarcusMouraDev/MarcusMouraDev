@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="280" viewBox="0 0 1280 280" role="img" aria-labelledby="boards-title boards-desc">
+  <title id="boards-title">Três frentes: automação, dados e IA</title>
+  <desc id="boards-desc">Automação de processos, dados para decisão e assistente pessoal em construção.</desc>
+  <rect width="1280" height="280" fill="#f3f4f1"/>
+
+  <defs>
+    <clipPath id="board-clip">
+      <path d="M0 0 H352 L380 28 V216 H0 Z"/>
+    </clipPath>
+  </defs>
+
+  <g transform="translate(72 32)">
+    <g clip-path="url(#board-clip)">
+      <rect width="380" height="216" fill="#0b46ef"/>
+    </g>
+    <path d="M352 0 L380 28" fill="none" stroke="#073ad0" stroke-width="1"/>
+    <rect x="28" y="28" width="36" height="36" fill="#ffffff" fill-opacity="0.16"/>
+    <path d="M37 46 H55 M46 37 V55" stroke="#ffffff" stroke-width="1.6" stroke-linecap="square"/>
+    <text x="28" y="92" fill="#f3f4f1" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="13" letter-spacing="1.4">01</text>
+    <text x="28" y="132" fill="#ffffff" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="-0.7">Automação de processos</text>
+    <text x="28" y="172" fill="#f3f4f1" fill-opacity="0.82" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="14">Hook → e-mail → planilha</text>
+  </g>
+
+  <g transform="translate(470 32)">
+    <rect width="380" height="216" fill="#15191a"/>
+    <rect x="28" y="28" width="36" height="36" fill="#0b46ef"/>
+    <rect x="36" y="40" width="20" height="4" fill="#f3f4f1"/>
+    <rect x="36" y="47" width="14" height="4" fill="#f3f4f1" fill-opacity="0.7"/>
+    <rect x="36" y="54" width="17" height="4" fill="#f3f4f1" fill-opacity="0.45"/>
+    <text x="28" y="92" fill="#f3f4f1" fill-opacity="0.72" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="13" letter-spacing="1.4">02</text>
+    <text x="28" y="132" fill="#f3f4f1" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="-0.7">Dados para decisão</text>
+    <text x="28" y="172" fill="#f3f4f1" fill-opacity="0.72" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="14">Banco → arquivo → insight</text>
+  </g>
+
+  <g transform="translate(868 32)">
+    <rect width="380" height="216" fill="#ffffff" stroke="#9aa09a" stroke-width="1"/>
+    <rect x="28" y="28" width="148" height="22" fill="#101214"/>
+    <text x="36" y="44" fill="#f3f4f1" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="11" letter-spacing="0.8">LAB · EM CONSTRUÇÃO</text>
+    <text x="28" y="92" fill="#5c605e" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="13" letter-spacing="1.4">03</text>
+    <text x="28" y="132" fill="#101214" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="-0.7">Assistente pessoal</text>
+    <text x="28" y="172" fill="#5c605e" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="14">Memória → habilidade → ação</text>
+  </g>
+</svg>

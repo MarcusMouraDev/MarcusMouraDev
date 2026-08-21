@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Marcus Moura — Software, automação, dados e IA</title>
+  <desc id="hero-desc">Ideias ganham forma. Processos viram produto. Automação, dados e IA.</desc>
+  <rect width="1280" height="420" fill="#f3f4f1"/>
+  <rect width="1280" height="2" fill="#0b46ef"/>
+
+  <defs>
+    <clipPath id="hero-board-clip">
+      <path d="M0 0 H420 L448 28 V100 H0 Z"/>
+    </clipPath>
+  </defs>
+
+  <g fill="#101214" fill-opacity="0.12" aria-hidden="true">
+    <circle cx="1216" cy="48" r="1.5"/>
+    <circle cx="1234" cy="48" r="1.5"/>
+    <circle cx="1252" cy="48" r="1.5"/>
+    <circle cx="1216" cy="66" r="1.5"/>
+    <circle cx="1234" cy="66" r="1.5"/>
+    <circle cx="1252" cy="66" r="1.5"/>
+    <circle cx="1216" cy="84" r="1.5"/>
+    <circle cx="1234" cy="84" r="1.5"/>
+    <circle cx="1252" cy="84" r="1.5"/>
+  </g>
+
+  <text x="64" y="92" fill="#101214" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="500">Marcus Moura</text>
+  <text x="64" y="122" fill="#5c605e" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="15">Software, automação, dados e IA</text>
+
+  <text x="64" y="210" fill="#101214" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="48" font-weight="600" letter-spacing="-1.8">Ideias ganham forma.</text>
+  <text x="64" y="268" fill="#2a2e30" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="40" font-weight="500" letter-spacing="-1.2">Processos viram produto.</text>
+
+  <rect x="64" y="296" width="248" height="4" fill="#0b46ef"/>
+  <text x="64" y="336" fill="#5c605e" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="14">11 projetos · sem métrica inventada</text>
+
+  <g transform="translate(760 86)">
+    <g clip-path="url(#hero-board-clip)">
+      <rect width="448" height="100" fill="#0b46ef"/>
+    </g>
+    <path d="M420 0 L448 28" fill="none" stroke="#073ad0" stroke-width="1"/>
+    <text x="28" y="42" fill="#ffffff" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600">Automação de processos</text>
+    <text x="28" y="70" fill="#f3f4f1" fill-opacity="0.82" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="13">Hook → e-mail → planilha</text>
+  </g>
+
+  <g transform="translate(780 182)">
+    <rect width="428" height="100" fill="#15191a"/>
+    <text x="28" y="42" fill="#f3f4f1" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600">Dados para decisão</text>
+    <text x="28" y="70" fill="#f3f4f1" fill-opacity="0.72" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="13">Banco → arquivo → insight</text>
+  </g>
+
+  <g transform="translate(760 278)">
+    <rect width="448" height="100" fill="#ffffff" stroke="#9aa09a" stroke-width="1"/>
+    <rect x="28" y="18" width="148" height="18" fill="#101214"/>
+    <text x="36" y="31" fill="#f3f4f1" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="10" letter-spacing="0.6">LAB · EM CONSTRUÇÃO</text>
+    <text x="28" y="62" fill="#101214" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600">Assistente pessoal</text>
+    <text x="28" y="86" fill="#5c605e" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="13">Memória → habilidade → ação</text>
+  </g>
+</svg>
