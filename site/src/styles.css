@@ -1,54 +1,50 @@
+/* Hallmark · genre: editorial · macrostructure: process boards as signature
+ * design-system: pipeline-editorial · designed-as-app
+ * tone: technical-editorial · anchor hue: cobalt
+ * pre-emit critique: P4 H4 E4 S4 R4 V4
+ */
+
 :root {
-  --bone: #f4f0e7;
-  --bone-strong: #ebe5da;
-  --paper: #fbf8f2;
-  --paper-raised: #fffdf8;
-  --ink: #111415;
-  --ink-soft: #2b2f30;
-  --muted: #5f625f;
-  --line: #c9c3b8;
-  --line-strong: #a8a197;
+  --bone: #f3f4f1;
+  --bone-strong: #e6e8e3;
+  --paper: #fafaf8;
+  --paper-raised: #ffffff;
+  --ink: #101214;
+  --ink-soft: #2a2e30;
+  --muted: #5c605e;
+  --line: #c5c8c2;
+  --line-strong: #9aa09a;
   --cobalt: #0b46ef;
   --cobalt-strong: #073ad0;
   --coral: #ff5a36;
   --on-cobalt: #ffffff;
   --on-coral: #111415;
-  --button-dark-text: #f4f0e7;
+  --button-dark-text: #f3f4f1;
   --aqua: #27bfb0;
   --green: #20934a;
-  --shadow-color: 17 20 21;
+  --rail: #15191a;
+  --radius: 2px;
+  --shadow-color: 16 18 20;
   --shadow-soft: 0 14px 40px rgb(var(--shadow-color) / 0.08);
   --shadow-card: 0 10px 20px rgb(var(--shadow-color) / 0.12);
   --font-sans: "Inter Tight Variable", "Inter Tight", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-stagger: 40ms;
+  --duration-micro: 80ms;
   --duration-quick: 150ms;
   --duration-fast: 250ms;
   --duration-medium: 350ms;
+  --distance-base: 8px;
+  --z-modal: 100;
+  --z-hover-preview: 220;
+  --z-skip: 1000;
+  --z-preloader: 1200;
   color: var(--ink);
   background: var(--bone);
   font-family: var(--font-sans);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-}
-
-:root[data-theme="dark"] {
-  --bone: #0f1213;
-  --bone-strong: #181c1d;
-  --paper: #171b1c;
-  --paper-raised: #1d2223;
-  --ink: #f4f0e7;
-  --ink-soft: #d9d4ca;
-  --muted: #aaa9a3;
-  --line: #3b4041;
-  --line-strong: #5a6061;
-  --cobalt: #365fdf;
-  --cobalt-strong: #2b4fc3;
-  --coral: #ff6b49;
-  --button-dark-text: #0f1213;
-  --aqua: #43d2c3;
-  --green: #43bd6b;
-  --shadow-color: 0 0 0;
 }
 
 * {
@@ -57,19 +53,21 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
+  scroll-padding-top: 80px;
   overflow-x: clip;
   background: var(--bone);
+  color-scheme: light;
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   background: var(--bone);
   color: var(--ink);
+  text-wrap: pretty;
   transition:
     color var(--duration-fast) var(--ease-out),
     background-color var(--duration-fast) var(--ease-out);

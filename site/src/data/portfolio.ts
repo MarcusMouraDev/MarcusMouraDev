@@ -1,3 +1,5 @@
+import { mailTo } from "./site";
+
 export type PortfolioCategory =
   | "Automação"
   | "Dados"
@@ -23,10 +25,7 @@ export type PortfolioItem = {
   featured: boolean;
 };
 
-const demoLink = (project: string) =>
-  `mailto:mpfagundesmoura@gmail.com?subject=${encodeURIComponent(
-    `Demonstração do projeto ${project}`,
-  )}`;
+const demoLink = (project: string) => mailTo(`Demonstração do projeto ${project}`);
 
 export const portfolioItems: PortfolioItem[] = [
   {
@@ -37,13 +36,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "private",
     category: "Automação",
     summary:
-      "Hook de fim de processo, e-mails automáticos e atualização de planilhas.",
+      "Quando o processo termina, o sistema manda e-mail e atualiza a planilha.",
     problem:
-      "O encerramento de rotinas exigia ações repetitivas de comunicação, conferência e atualização de controles.",
+      "Fechar a rotina pedia de novo as mesmas ações: avisar alguém, conferir dado e atualizar controle.",
     contribution:
-      "Modelei o fluxo para reagir ao fim do processo, validar os dados e executar cada ação com registro do estado.",
+      "O fluxo reage ao fim do processo, valida os dados, executa cada ação e registra o estado.",
     outcome:
-      "Base, comunicação e acompanhamento reunidos em um fluxo automatizado, claro e rastreável.",
+      "Base, aviso e acompanhamento ficam no mesmo fluxo, com registro do que aconteceu.",
     technologies: ["Banco de dados", "E-mail automático", "Planilhas", "Automação"],
     flow: ["Evento concluído", "Validar dados", "E-mail e planilha", "Registrar conclusão"],
     href: demoLink("Acionamento de Clientes"),
@@ -57,13 +56,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "private",
     category: "Dados",
     summary:
-      "Extração de bancos, arquivos analíticos e informação consolidada para decisões.",
+      "Tira dado de banco, gera arquivo analítico e junta a informação para quem decide.",
     problem:
-      "Dados operacionais dispersos dificultavam a análise de processos, resultados e oportunidades de melhoria.",
+      "Os dados operacionais estavam espalhados. Ficava difícil olhar processo, resultado e o que melhorar.",
     contribution:
-      "Estruturei extração, transformação, geração de arquivos e uma saída de insights sem expor informações sensíveis.",
+      "Separei extração, transformação e geração de arquivo. A saída de insight não expõe dado sensível.",
     outcome:
-      "Informações consolidadas para apoiar análises de processos, resultados e tomada de decisão.",
+      "A informação consolidada serve para analisar processo, resultado e decisão.",
     technologies: ["Banco de dados", "Trino", "Tableau", "SharePoint"],
     flow: ["Fontes de dados", "Extrair", "Consolidar", "Gerar insights"],
     href: demoLink("Automação de Acompanhamento de Faturamento"),
@@ -76,13 +75,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "private",
     category: "Automação",
     summary:
-      "Chatbots em Python com integrações por APIs, histórico e agendamento automatizado.",
+      "Chatbots em Python, com API, histórico e agendamento automático.",
     problem:
-      "Atendimentos repetitivos precisavam ser organizados sem perder contexto entre conversa e agendamento.",
+      "Atendimento repetido precisava de ordem, sem perder o contexto entre a conversa e o agendamento.",
     contribution:
-      "Conectei regras de atendimento, histórico, APIs e agenda em uma jornada contínua.",
+      "Liguei regra de atendimento, histórico, API e agenda no mesmo fluxo.",
     outcome:
-      "Conversas transformadas em atendimentos e agendamentos organizados em um fluxo contínuo.",
+      "A conversa vira atendimento e agendamento, sem quebrar o contexto.",
     technologies: ["Python", "APIs", "Banco de dados", "Agendamento"],
     flow: ["Mensagem", "Entender intenção", "Consultar contexto", "Agendar"],
     href: demoLink("Chatbots de Atendimento"),
@@ -95,13 +94,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "private",
     category: "Web",
     summary:
-      "PWA de finanças pessoais, privada e offline, com lançamentos, metas, recorrências e backup.",
+      "PWA de finança pessoal, privada e offline: lançamento, meta, recorrência e backup.",
     problem:
-      "Organizar a vida financeira sem depender de contas externas ou conectividade constante.",
+      "Organizar dinheiro sem conta externa e sem depender de internet o tempo todo.",
     contribution:
-      "Projetei uma experiência local-first com dados no dispositivo e fluxo financeiro completo.",
+      "Os dados ficam no aparelho. Montei o fluxo financeiro completo aí.",
     outcome:
-      "Experiência offline-first, dados locais e uma leitura financeira coerente para o uso diário.",
+      "Funciona offline. Os dados são locais. Dá para acompanhar o dinheiro no dia a dia.",
     technologies: ["JavaScript", "IndexedDB", "PWA", "CSS"],
     flow: ["Registrar", "Organizar", "Acompanhar", "Fazer backup"],
     href: demoLink("Saldo"),
@@ -114,13 +113,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "private",
     category: "Web",
     summary:
-      "Sistema de tarefas com Kanban, indicadores, filtros, API HTTP e persistência SQLite.",
+      "Tarefas com Kanban, indicador, filtro, API HTTP e SQLite.",
     problem:
-      "Tarefas e indicadores precisavam coexistir em uma interface única, consultável e atualizável.",
+      "Tarefa e indicador precisavam da mesma tela, consultável e atualizável.",
     contribution:
-      "Construí banco, API, operações CRUD, filtros, indicadores e a interface Kanban.",
+      "Fiz o banco, a API, o CRUD, os filtros, os indicadores e o Kanban.",
     outcome:
-      "Produto funcional do banco de dados ao Kanban e aos indicadores de acompanhamento.",
+      "O produto cobre do banco até o Kanban e os indicadores.",
     technologies: ["Python", "SQLite", "REST API", "JavaScript"],
     flow: ["Criar tarefa", "Priorizar", "Mover no Kanban", "Acompanhar"],
     href: demoLink("Inter Task Monitor"),
@@ -133,13 +132,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "public",
     category: "Python",
     summary:
-      "Consulta climática em tempo real com histórico, tratamento de erros e arquitetura em camadas.",
+      "Consulta o clima em tempo real, guarda histórico e trata erro. Código em camadas.",
     problem:
-      "Consumir dados externos com tratamento consistente de respostas, falhas e persistência de histórico.",
+      "Consumir API externa com resposta, falha e histórico tratados do mesmo jeito.",
     contribution:
-      "Separei domínio, integração, persistência e análise em componentes orientados a objetos.",
+      "Separei domínio, integração, persistência e análise em objetos.",
     outcome:
-      "Integração de API, persistência e análise de dados organizadas em camadas legíveis.",
+      "API, persistência e análise ficam em camadas que dá para ler.",
     technologies: ["Python", "OpenWeather", "SQLAlchemy", "Pandas"],
     flow: ["Consultar API", "Validar resposta", "Persistir", "Analisar histórico"],
     href:
@@ -153,13 +152,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "public",
     category: "Python",
     summary:
-      "CRUD de usuários com persistência relacional, responsabilidades separadas e POO.",
+      "CRUD de usuário com banco relacional, cada parte no seu lugar, em POO.",
     problem:
-      "Modelar operações de cadastro e consulta mantendo regras, persistência e interface desacopladas.",
+      "Cadastro e consulta sem misturar regra, persistência e interface.",
     contribution:
-      "Estruturei entidades, operações CRUD e persistência relacional com arquitetura simples.",
+      "Entidade, CRUD e persistência relacional, numa arquitetura simples.",
     outcome:
-      "CRUD relacional com responsabilidades claras e base adequada para evolução e testes.",
+      "CRUD relacional com responsabilidade separada. Dá para crescer e testar em cima.",
     technologies: ["Python", "SQLAlchemy", "SQLite", "POO"],
     flow: ["Validar", "Persistir", "Consultar", "Atualizar"],
     href: "https://github.com/MarcusMouraDev/Meu-Portif-lio-",
@@ -172,13 +171,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "public",
     category: "Python",
     summary:
-      "RPG de terminal com personagem, classes, missões, batalha e progressão de experiência.",
+      "RPG de terminal: personagem, classe, missão, batalha e experiência.",
     problem:
-      "Organizar múltiplos estados e regras de progressão sem misturar a lógica de cada sistema.",
+      "Vários estados e regras de progresso, sem misturar a lógica de cada sistema.",
     contribution:
-      "Modelei personagem, missões, batalha, níveis e recompensas com orientação a objetos.",
+      "Personagem, missão, batalha, nível e recompensa em objetos.",
     outcome:
-      "Regras de negócio, estados e progressão reunidos em uma experiência reproduzível.",
+      "Regra, estado e progressão no mesmo jogo, reproduzível.",
     technologies: ["Python", "POO", "Game Logic"],
     flow: ["Criar personagem", "Receber missão", "Batalhar", "Evoluir"],
     href:
@@ -192,13 +191,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "public",
     category: "Web",
     summary:
-      "Fluxo de agendamento para barbearia integrado ao WhatsApp e pensado para reduzir atrito.",
+      "Agendamento de barbearia que cai no WhatsApp, pensado para o celular.",
     problem:
-      "A passagem entre escolha do serviço e contato precisava ser curta e compreensível no celular.",
+      "Do serviço até o contato, o caminho no celular precisava ser curto e óbvio.",
     contribution:
-      "Desenhei uma jornada responsiva que conduz intenção, escolha e conversa no WhatsApp.",
+      "Tela responsiva: intenção, escolha do serviço e conversa no WhatsApp.",
     outcome:
-      "Jornada curta entre intenção, agendamento e atendimento, com poucos pontos de decisão.",
+      "Pouca decisão no caminho entre querer agendar e falar com a barbearia.",
     technologies: ["HTML", "CSS", "JavaScript", "WhatsApp"],
     flow: ["Escolher serviço", "Selecionar horário", "Revisar", "Conversar"],
     href: "https://github.com/MarcusMouraDev/Meu-Portif-lio-",
@@ -211,13 +210,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "public",
     category: "Python",
     summary:
-      "Jogo clássico estruturado com classes, controle de tentativas e validação de entrada.",
+      "Forca clássica, com classe, controle de tentativa e validação de entrada.",
     problem:
-      "Separar palavra, estado visual, entrada e regras da partida sem duplicar responsabilidades.",
+      "Palavra, desenho, entrada e regra da partida, cada um no seu lugar.",
     contribution:
-      "Organizei o jogo em classes independentes e tratei entradas e feedback de cada estado.",
+      "Separei o jogo em classes. Tratei entrada e feedback de cada estado.",
     outcome:
-      "Validação de entrada e lógica de jogo separadas em componentes orientados a objetos.",
+      "Validação de entrada e lógica do jogo em componentes separados, em POO.",
     technologies: ["Python", "POO", "CLI"],
     flow: ["Escolher nível", "Receber palavra", "Tentar letra", "Concluir partida"],
     href:
@@ -231,13 +230,13 @@ export const portfolioItems: PortfolioItem[] = [
     status: "private",
     category: "Mobile",
     summary:
-      "Experimento mobile financeiro com foco em leitura rápida, privacidade e experiência nativa.",
+      "Experimento no iPhone: ver o dinheiro rápido, com privacidade, em interface nativa.",
     problem:
-      "Traduzir o acompanhamento financeiro para uma interação móvel concisa e cotidiana.",
+      "Levar o acompanhamento financeiro para o celular, curto, do dia a dia.",
     contribution:
-      "Desenhei componentes e estados nativos priorizando clareza, privacidade e uso recorrente.",
+      "Componentes e estados nativos. Privilegiei leitura, privacidade e uso repetido.",
     outcome:
-      "Interface nativa focada em clareza, privacidade e acompanhamento financeiro diário.",
+      "Interface nativa, privada, para acompanhar o dinheiro no dia a dia.",
     technologies: ["SwiftUI", "iOS", "UX"],
     flow: ["Abrir resumo", "Ler situação", "Registrar movimento", "Acompanhar"],
     href: demoLink("Saldo iOS"),
@@ -250,17 +249,16 @@ export const portfolioItems: PortfolioItem[] = [
     status: "lab",
     category: "IA",
     summary:
-      "IA personalizada com memória controlada, habilidades reutilizáveis e automações.",
+      "IA pessoal com memória controlada, habilidade reutilizável e automação.",
     problem:
-      "Automatizar tarefas cotidianas preservando privacidade, transparência e controle sobre cada execução.",
+      "Automatizar tarefa do dia a dia sem perder privacidade, transparência e controle de cada execução.",
     contribution:
-      "Estou organizando contratos internos, memória, ferramentas explícitas e fallback controlado em nuvem.",
+      "Ainda estou organizando contrato interno, memória, ferramenta explícita e fallback controlado em nuvem.",
     outcome:
-      "Uma arquitetura em evolução para transformar intenção em ações observáveis e reutilizáveis.",
+      "Arquitetura em construção: a intenção vira ação que dá para ver e reusar.",
     technologies: ["Python", "Ollama", "Agentes", "Automação"],
     flow: ["Entender contexto", "Consultar memória", "Escolher habilidade", "Executar ação"],
-    href:
-      "mailto:mpfagundesmoura@gmail.com?subject=Conversa%20sobre%20o%20Assistente%20Pessoal%20de%20IA",
+    href: mailTo("Conversa sobre o Assistente Pessoal de IA"),
     featured: true,
   },
 ];

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OpenWeather">
+  <g fill="#EB6E4B">
+    <circle cx="32" cy="32" r="12"/>
+    <rect x="30" y="4" width="4" height="12" rx="2"/>
+    <rect x="30" y="48" width="4" height="12" rx="2"/>
+    <rect x="4" y="30" width="12" height="4" rx="2"/>
+    <rect x="48" y="30" width="12" height="4" rx="2"/>
+    <g transform="rotate(45 32 32)">
+      <rect x="30" y="4" width="4" height="12" rx="2"/>
+      <rect x="30" y="48" width="4" height="12" rx="2"/>
+      <rect x="4" y="30" width="12" height="4" rx="2"/>
+      <rect x="48" y="30" width="12" height="4" rx="2"/>
+    </g>
+  </g>
+</svg>

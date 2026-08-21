@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="og-title og-desc">
+  <title id="og-title">Marcus Moura</title>
+  <desc id="og-desc">Software, automa��o, dados e IA</desc>
+  <rect width="1200" height="630" fill="#f4f0e7"/>
+  <text x="88" y="268" fill="#111415" font-family="Arial Black, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-3.8">Marcus Moura</text>
+  <rect x="738" y="238" width="16" height="16" fill="#ff5a36"/>
+  <text x="88" y="338" fill="#2b2f30" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="28">Software, automa��o, dados e IA</text>
+  <rect x="88" y="368" width="312" height="4" fill="#0b46ef"/>
+  <path d="M868 412 L1116 412 L1144 440 L1144 556 L896 556 L868 528 Z" fill="none" stroke="#111415" stroke-width="2"/>
+</svg>
