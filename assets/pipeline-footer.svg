@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="96" viewBox="0 0 1280 96" role="img" aria-labelledby="footer-title footer-desc">
+  <title id="footer-title">MarcusMouraDev</title>
+  <desc id="footer-desc">Ideias ganham forma. Processos viram produto.</desc>
+  <rect width="1280" height="96" fill="#f3f4f1"/>
+  <rect x="72" y="0" width="312" height="4" fill="#0b46ef"/>
+  <text x="72" y="48" fill="#101214" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="15" letter-spacing="0.4">MarcusMouraDev</text>
+  <text x="72" y="74" fill="#5c605e" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16">Ideias ganham forma. Processos viram produto.</text>
+</svg>

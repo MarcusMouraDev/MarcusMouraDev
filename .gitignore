@@ -1,5 +1,6 @@
 .DS_Store
 /artifacts/
+/assets/.preview/
 /site/artifacts/
 /site/dist/
 /site/node_modules/

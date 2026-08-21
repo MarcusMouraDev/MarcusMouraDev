@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="44" viewBox="0 0 196 44" role="img" aria-labelledby="btn-portfolio">
+  <title id="btn-portfolio">Abrir portfólio</title>
+  <rect x="0.75" y="0.75" width="194.5" height="42.5" rx="2" fill="#fafaf8" stroke="#101214" stroke-width="1.5"/>
+  <text x="22" y="28" fill="#101214" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="500">Abrir portfólio</text>
+  <path d="M166 16 L178 16 L178 28" fill="none" stroke="#101214" stroke-width="1.7"/>
+  <path d="M178 16 L166 28" fill="none" stroke="#101214" stroke-width="1.7"/>
+</svg>

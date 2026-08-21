@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="44" viewBox="0 0 168 44" role="img" aria-labelledby="btn-conversar">
+  <title id="btn-conversar">Conversar</title>
+  <rect width="168" height="44" rx="2" fill="#101214"/>
+  <text x="22" y="28" fill="#f3f4f1" font-family="'Inter Tight', Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="500">Conversar</text>
+  <path d="M138 16 L150 16 L150 28" fill="none" stroke="#f3f4f1" stroke-width="1.7"/>
+  <path d="M150 16 L138 28" fill="none" stroke="#f3f4f1" stroke-width="1.7"/>
+</svg>
