@@ -1,41 +1,42 @@
-import { useEffect, useMemo, useState } from "react";
-import { useReducedMotion } from "motion/react";
+import { useMemo, useState } from "react";
+import { motion } from "motion/react";
 import { ArrowRight } from "iconoir-react";
-import { CaseDialog } from "./components/CaseDialog";
+import { CaseDetailPanel } from "./components/CaseDetailPanel";
+import { CursorLight } from "./components/CursorLight";
 import { SiteHeader } from "./components/SiteHeader";
 import { AboutSection } from "./components/sections/AboutSection";
 import { ContactSection } from "./components/sections/ContactSection";
 import { FeaturedCasesSection } from "./components/sections/FeaturedCasesSection";
 import { HeroSection } from "./components/sections/HeroSection";
 import { ProjectArchiveSection } from "./components/sections/ProjectArchiveSection";
-import type { RevealProps, Theme } from "./components/sections/types";
+import { ModalCardsTw } from "./components/ui/modal-cards-tw";
+import { ScrollMaskTw } from "./components/ui/scroll-mask-tw";
+import type { CaseSelectHandler } from "./components/sections/types";
 import {
   archiveItems,
+  portfolioItems,
   type PortfolioCategory,
   type PortfolioItem,
 } from "./data/portfolio";
+import { portfolioToModalCard } from "./data/portfolioModalCards";
+import { useRevealOnce } from "./motion";
+import { ScrollProgress } from "./components/ScrollProgress";
 
-function readStoredTheme(): Theme {
-  if (typeof window === "undefined") return "light";
-  const stored = window.localStorage.getItem("mm-theme");
-  if (stored === "dark" || stored === "light") return stored;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-}
+type PrototypeProps = {
+  introReady?: boolean;
+};
 
-export function Prototype() {
-  const reduceMotion = useReducedMotion();
-  const [theme, setTheme] = useState<Theme>(readStoredTheme);
+export function Prototype({ introReady = true }: PrototypeProps) {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
+  const [morphModal, setMorphModal] = useState(false);
   const [activeCategory, setActiveCategory] = useState<"Todos" | PortfolioCategory>("Todos");
+  const reveal = useRevealOnce();
+  const modalCards = useMemo(() => portfolioItems.map(portfolioToModalCard), []);
 
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-    document.documentElement.style.colorScheme = theme;
-    const themeColor = document.querySelector('meta[name="theme-color"]:not([media])');
-    if (themeColor) {
-      themeColor.setAttribute("content", theme === "dark" ? "#0e1112" : "#f3f4f1");
-    }
-  }, [theme]);
+  const handleSelectItem: CaseSelectHandler = (item, options) => {
+    setMorphModal(Boolean(options?.morph));
+    setSelectedItem(item);
+  };
 
   const visibleProjects = useMemo(
     () =>
@@ -45,52 +46,67 @@ export function Prototype() {
     [activeCategory],
   );
 
-  const toggleTheme = () => {
-    const nextTheme: Theme = theme === "light" ? "dark" : "light";
-    setTheme(nextTheme);
-    window.localStorage.setItem("mm-theme", nextTheme);
-  };
-
-  const reveal: RevealProps = reduceMotion
-    ? {}
-    : {
-        initial: { opacity: 0, transform: "translateY(18px)" },
-        whileInView: { opacity: 1, transform: "translateY(0px)" },
-        viewport: { once: true, amount: 0.15 },
-        transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
-      };
-
   return (
-    <>
+    <ModalCardsTw
+      cards={modalCards}
+      selectedId={selectedItem?.id ?? null}
+      onSelectedIdChange={(id) => {
+        if (!id) {
+          setSelectedItem(null);
+          setMorphModal(false);
+        }
+      }}
+      animationVariant={morphModal ? "scale" : "fade"}
+      ariaLabel="Detalhes do projeto"
+      renderModal={(card, close) => {
+        const item = portfolioItems.find((entry) => entry.id === card.id);
+        return item ? <CaseDetailPanel item={item} onClose={close} morphTitle={morphModal} /> : null;
+      }}
+    >
+      <ScrollProgress />
+      <CursorLight />
+
       <a className="skip-link" href="#conteudo">
         Pular para o conteúdo
       </a>
 
-      <SiteHeader theme={theme} onToggleTheme={toggleTheme} />
+      <SiteHeader />
 
       <main id="conteudo">
-        <HeroSection reveal={reveal} onSelectItem={setSelectedItem} />
-        <FeaturedCasesSection reveal={reveal} onSelectItem={setSelectedItem} />
+        <HeroSection
+          onSelectItem={handleSelectItem}
+          introReady={introReady}
+        />
+        <ScrollMaskTw
+          className="work-opening"
+          variant="iris"
+          mode="reveal"
+          background="#f3f4f1"
+          ariaLabel="Abertura do portfólio"
+        >
+          <p className="eyebrow">Arquivo</p>
+          <p className="work-opening__title">O arquivo vem em seguida.</p>
+          <p className="work-opening__note">Cada card abre o projeto.</p>
+        </ScrollMaskTw>
+        <FeaturedCasesSection onSelectItem={handleSelectItem} />
         <ProjectArchiveSection
-          reveal={reveal}
           activeCategory={activeCategory}
           onCategoryChange={setActiveCategory}
           visibleProjects={visibleProjects}
-          onSelectItem={setSelectedItem}
+          onSelectItem={handleSelectItem}
+          selectedId={selectedItem?.id ?? null}
         />
         <AboutSection reveal={reveal} />
         <ContactSection reveal={reveal} />
       </main>
 
-      <footer className="site-footer">
+      <motion.footer className="site-footer" {...reveal}>
         <span>© {new Date().getFullYear()} Marcus Moura</span>
         <a href="#top">
           Voltar ao início <ArrowRight aria-hidden />
         </a>
-      </footer>
-
-      <CaseDialog item={selectedItem} onOpenChange={(open) => !open && setSelectedItem(null)} />
-    </>
+      </motion.footer>
+    </ModalCardsTw>
   );
 }
 

@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -15,31 +15,16 @@ import {
   SendMail,
   Settings,
 } from "iconoir-react";
+import { FLOW_EASE, STAGGER_SECONDS, useMotionEnabled, useStagger } from "../motion";
 import { IconSocket } from "./IconSocket";
 
-const flowEase = [0.22, 1, 0.36, 1] as const;
-
-function useStepMotion() {
-  const reduceMotion = useReducedMotion();
-
-  return (index: number, extraDelay = 0) =>
-    reduceMotion
-      ? {}
-      : {
-          initial: { opacity: 0, transform: "translateY(8px)" },
-          whileInView: { opacity: 1, transform: "translateY(0px)" },
-          viewport: { once: true, amount: 0.35 } as const,
-          transition: {
-            duration: 0.35,
-            delay: extraDelay + index * 0.07,
-            ease: flowEase,
-          },
-        };
+function markInView(entry?: IntersectionObserverEntry | null) {
+  entry?.target.classList.add("is-in");
 }
 
 export function AutomationVisual() {
-  const stepMotion = useStepMotion();
-  const reduceMotion = useReducedMotion();
+  const stepMotion = useStagger();
+  const motionEnabled = useMotionEnabled();
   const steps = [
     { icon: Flash, title: "Evento", text: "Fim do processo", status: "Iniciado", tone: "cobalt" },
     {
@@ -69,51 +54,66 @@ export function AutomationVisual() {
     <div className="automation-board visual-board">
       <div className="board-rail" aria-hidden="true" />
       <div className="automation-flow">
-        {steps.map((step, index) => (
-          <motion.div className="flow-row" key={step.title} {...stepMotion(index)}>
-            <IconSocket icon={step.icon} accent={step.tone} />
-            <div className="flow-row__copy">
-              <strong>{step.title}</strong>
-              <span>{step.text}</span>
-            </div>
-            <span className={`status status--${step.tone}`}>{step.status}</span>
-            {index < steps.length - 1 ? (
+        {steps.map((step, index) => {
+          const isLast = index === steps.length - 1;
+          return (
+            <motion.div
+              className="flow-row"
+              key={step.title}
+              {...stepMotion(index)}
+              onViewportEnter={markInView}
+            >
               <motion.span
-                className="flow-connector"
-                aria-hidden="true"
-                initial={reduceMotion ? false : { transform: "scaleY(0)" }}
-                whileInView={{ transform: "scaleY(1)" }}
+                className="flow-row__icon"
+                initial={motionEnabled && isLast ? { transform: "scale(0.97)" } : false}
+                whileInView={{ transform: "scale(1)" }}
                 viewport={{ once: true, amount: 0.35 }}
-                transition={{
-                  duration: 0.35,
-                  delay: 0.12 + index * 0.07,
-                  ease: flowEase,
-                }}
-              />
-            ) : null}
-          </motion.div>
-        ))}
+                transition={{ duration: 0.25, delay: index * STAGGER_SECONDS, ease: FLOW_EASE }}
+              >
+                <IconSocket icon={step.icon} accent={step.tone} />
+              </motion.span>
+              <div className="flow-row__copy">
+                <strong>{step.title}</strong>
+                <span>{step.text}</span>
+              </div>
+              <span className={`status status--${step.tone}`}>{step.status}</span>
+              {index < steps.length - 1 ? (
+                <motion.span
+                  className="flow-connector"
+                  aria-hidden="true"
+                  initial={motionEnabled ? { transform: "scaleY(0)" } : false}
+                  whileInView={{ transform: "scaleY(1)" }}
+                  viewport={{ once: true, amount: 0.35 }}
+                  transition={{
+                    duration: 0.25,
+                    delay: 0.08 + index * STAGGER_SECONDS,
+                    ease: FLOW_EASE,
+                  }}
+                />
+              ) : null}
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );
 }
 
 export function DataVisual() {
-  const stepMotion = useStepMotion();
-  const reduceMotion = useReducedMotion();
-  const arrowMotion = reduceMotion
-    ? {}
-    : {
+  const stepMotion = useStagger();
+  const motionEnabled = useMotionEnabled();
+  const arrowMotion = motionEnabled
+    ? {
         initial: { opacity: 0, transform: "translateX(-6px)" },
         whileInView: { opacity: 1, transform: "translateX(0px)" },
         viewport: { once: true, amount: 0.35 } as const,
-        transition: { duration: 0.35, ease: flowEase },
-      };
+      }
+    : {};
 
   return (
     <div className="data-board visual-board">
       <div className="board-rail" aria-hidden="true" />
-      <motion.div className="data-sources" {...stepMotion(0)}>
+      <motion.div className="data-sources" {...stepMotion(0)} onViewportEnter={markInView}>
         <span className="board-label">Fontes</span>
         <div className="source-card">
           <Database width={28} height={28} strokeWidth={1.7} aria-hidden />
@@ -137,20 +137,30 @@ export function DataVisual() {
           </div>
         </div>
       </motion.div>
-      <motion.div className="data-arrow" aria-hidden="true" {...arrowMotion} transition={{ duration: 0.35, delay: 0.07, ease: flowEase }}>
+      <motion.div
+        className="data-arrow"
+        aria-hidden="true"
+        {...arrowMotion}
+        transition={{ duration: 0.25, delay: STAGGER_SECONDS, ease: FLOW_EASE }}
+      >
         <ArrowRight />
       </motion.div>
-      <motion.div className="analysis-card" {...stepMotion(1)}>
+      <motion.div className="analysis-card" {...stepMotion(1)} onViewportEnter={markInView}>
         <span className="board-label">Análise</span>
         <IconSocket icon={GraphUp} accent="cobalt" size="large" />
         <strong>Consolidar</strong>
         <p>Transformar dados em informação confiável.</p>
         <span className="status status--cobalt">Processando</span>
       </motion.div>
-      <motion.div className="data-arrow" aria-hidden="true" {...arrowMotion} transition={{ duration: 0.35, delay: 0.14, ease: flowEase }}>
+      <motion.div
+        className="data-arrow"
+        aria-hidden="true"
+        {...arrowMotion}
+        transition={{ duration: 0.25, delay: STAGGER_SECONDS * 2, ease: FLOW_EASE }}
+      >
         <ArrowRight />
       </motion.div>
-      <motion.div className="insight-card" {...stepMotion(2)}>
+      <motion.div className="insight-card" {...stepMotion(2)} onViewportEnter={markInView}>
         <span className="board-label">Saída</span>
         <IconSocket icon={LightBulbOn} accent="aqua" size="large" />
         <strong>Insights e recomendações</strong>
@@ -162,24 +172,24 @@ export function DataVisual() {
 }
 
 export function AiVisual() {
-  const stepMotion = useStepMotion();
+  const stepMotion = useStagger();
   const modules = [
     {
       icon: BrainElectricity,
       title: "Memória",
-      text: "Preferências e histórico sob controle.",
+      text: "Preferência e histórico, no seu controle.",
       tone: "cobalt",
     },
     {
       icon: Settings,
       title: "Habilidades",
-      text: "Ações e integrações reutilizáveis.",
+      text: "Ações e integrações que dá para reusar.",
       tone: "cobalt",
     },
     {
       icon: NetworkRight,
       title: "Automações",
-      text: "Tarefas de ponta a ponta com autonomia.",
+      text: "Tarefas inteiras, com autonomia.",
       tone: "aqua",
     },
   ] as const;
@@ -198,7 +208,7 @@ export function AiVisual() {
       </motion.div>
       <div className="ai-modules">
         {modules.map((module, index) => (
-          <motion.div className="ai-module" key={module.title} {...stepMotion(index, 0.08)}>
+          <motion.div className="ai-module" key={module.title} {...stepMotion(index, STAGGER_SECONDS * 2)}>
             <IconSocket icon={module.icon} accent={module.tone} size="large" />
             <strong>{module.title}</strong>
             <p>{module.text}</p>

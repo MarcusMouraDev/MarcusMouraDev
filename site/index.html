@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfólio de Marcus Moura: software, automação, dados e inteligência artificial aplicada a processos reais."
+      content="Portfólio de Marcus Moura. Software, automação, dados e IA em processos reais."
     />
     <meta name="theme-color" content="#f3f4f1" />
-    <meta name="theme-color" content="#f3f4f1" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0e1112" media="(prefers-color-scheme: dark)" />
     <meta name="author" content="Marcus Moura" />
     <link rel="canonical" href="https://marcus-moura-portfolio.mpfagundesmoura.chatgpt.site/" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -55,17 +53,7 @@
       }
     </script>
     <script>
-      (function () {
-        var stored = localStorage.getItem("mm-theme");
-        var theme =
-          stored === "light" || stored === "dark"
-            ? stored
-            : window.matchMedia("(prefers-color-scheme: dark)").matches
-              ? "dark"
-              : "light";
-        document.documentElement.dataset.theme = theme;
-        document.documentElement.style.colorScheme = theme;
-      })();
+      document.documentElement.style.colorScheme = "light";
     </script>
   </head>
   <body>

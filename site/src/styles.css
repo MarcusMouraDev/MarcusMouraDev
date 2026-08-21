@@ -30,34 +30,21 @@
   --font-sans: "Inter Tight Variable", "Inter Tight", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-stagger: 40ms;
+  --duration-micro: 80ms;
   --duration-quick: 150ms;
   --duration-fast: 250ms;
   --duration-medium: 350ms;
+  --distance-base: 8px;
+  --z-modal: 100;
+  --z-hover-preview: 220;
+  --z-skip: 1000;
+  --z-preloader: 1200;
   color: var(--ink);
   background: var(--bone);
   font-family: var(--font-sans);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-}
-
-:root[data-theme="dark"] {
-  --bone: #0e1112;
-  --bone-strong: #161a1b;
-  --paper: #15191a;
-  --paper-raised: #1c2122;
-  --ink: #eef0ec;
-  --ink-soft: #cfd2cc;
-  --muted: #a3a6a1;
-  --line: #3b4041;
-  --line-strong: #5a6061;
-  --cobalt: #365fdf;
-  --cobalt-strong: #2b4fc3;
-  --coral: #ff6b49;
-  --button-dark-text: #0e1112;
-  --aqua: #43d2c3;
-  --green: #43bd6b;
-  --rail: #080a0b;
-  --shadow-color: 0 0 0;
 }
 
 * {
@@ -69,6 +56,7 @@ html {
   scroll-padding-top: 80px;
   overflow-x: clip;
   background: var(--bone);
+  color-scheme: light;
 }
 
 body {

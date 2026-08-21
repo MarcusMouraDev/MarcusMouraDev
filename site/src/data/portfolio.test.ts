@@ -33,4 +33,8 @@ describe("portfolio content", () => {
       expect(item.technologies.length).toBeGreaterThan(0);
     }
   });
+
+  it("does not add React to project technology arrays", () => {
+    expect(portfolioItems.every((item) => !item.technologies.includes("React"))).toBe(true);
+  });
 });

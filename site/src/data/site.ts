@@ -5,9 +5,9 @@ export const publicProfile = {
   github: "https://github.com/MarcusMouraDev",
   linkedin: "https://www.linkedin.com/in/marcuspaulomoura",
   whatsapp: "https://wa.me/5531993555554",
-  title: "Marcus Moura — Software, automação, dados e IA",
+  title: "Marcus Moura - Software, automação, dados e IA",
   description:
-    "Portfólio de Marcus Moura: software, automação, dados e inteligência artificial aplicada a processos reais.",
+    "Portfólio de Marcus Moura. Software, automação, dados e IA em processos reais.",
   tagline: "Ideias ganham forma. Processos viram produto.",
 } as const;
 
